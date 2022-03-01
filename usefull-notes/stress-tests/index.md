@@ -1,6 +1,9 @@
+--
 layout: page
 title: "Стресс-тестирование"
 permalink: /usefull-notes/stress-tests/
+theme: jekyll-theme-hacker
+--
 
 # Стресс-тестирование
 Рано или поздно наступает момент, когда ваш код - идеальный. Но не работает.
