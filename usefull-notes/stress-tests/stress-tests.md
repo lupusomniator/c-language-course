@@ -41,7 +41,7 @@ https://contest.yandex.ru/contest/35393/problems/
 Массив же строк может быть в целом произвольным, но обычно им является набор входных аргументов программы, задаваемых как параметры функции main.
 
 Ниже представлен пример генератора для задачи выше.
-```(c++)
+```c++
 #include "testlib.h"
 #include <iostream>
 using namespace std;
@@ -58,7 +58,7 @@ int main(int argc, char* argv[]) {
 ```
 
 Теперь, если собрать проект и запустить его из консоли с аргументам, получится автосгенерированный тест:
-```
+```bash
 $ ./testgen.exe 10
 24 10
 -545
@@ -76,7 +76,7 @@ $ ./testgen.exe 10
 ## Генератор ответов
 Генератор ответов - то самое тупое решение, которое легко написать и несложно проверить на валидность. Это то решение, с которым вы будете сверять ваше "идеальное-но-неработающее" решение.
 Это может быть решение, написанное на любом языке. Для пример выше возьмем C++:
-```(c++)
+```c++
 #include <iostream>
 #include <vector>
 
@@ -109,12 +109,12 @@ int main() {
 
 Теперь, когда у нас есть генератор входных данных и генератор ответов, мы можем сформировать готовый тест.
 Например, так:
-```
+```bash
 $ ./testgen.exe 10 > test_10; ./answergen.exe < test_10 > test_10.answ
 ```
 
 или вот так:
-```
+```bash
 $ ./answergen.exe < $(./testgen.exe 10) > test_10.answ
 ```
 
@@ -125,7 +125,7 @@ $ ./answergen.exe < $(./testgen.exe 10) > test_10.answ
 
 С первым, хочется верить, справятся все. Скрипт же по-сути должен множество раз вызывать строчки выше с разнообразными (возможно случайными) аргументам для генератора и сравнивать результаты тупого решения с вашим.
 Сравнение, например, можно организовать через команду `FC` на Windows или `diff` на Unix:
-```
+```bash
 $ ./testgen.exe 10 > test_10; ./answergen.exe < test_10 > test_10.answ; ./my_solution.exe < test_10 > test_10.sol; FC test_10.answ test_10.sol
 Comparing files test_10.answ and TEST_10.SOL
 FC: no differences encountered
@@ -134,16 +134,16 @@ $ echo $?
 ```
 
 Вот пример скрипта запуска на Python:
-```(python)
+```python
 import subprocess
 from subprocess import PIPE, STDOUT
 
 for i in range(10000):
     testInput = subprocess.run(
-		["./testgen.exe", str(i + 1000)], # аргумент генератора будет вариороваться от 1000 до 11000
-        stdout=subprocess.PIPE
+            ["./testgen.exe", str(i + 1000)], # аргумент генератора будет вариороваться от 1000 до 11000
+            stdout=subprocess.PIPE
 	)
-    
+
     p1 = subprocess.Popen(["./answergen.exe"], stdout=PIPE, stdin=PIPE, stderr=STDOUT) 
     p2 = subprocess.Popen(["./my_solution.exe"], stdout=PIPE, stdin=PIPE, stderr=STDOUT)  
 
