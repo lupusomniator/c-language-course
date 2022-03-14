@@ -145,7 +145,7 @@ $ ./Stest.exe
 int main(void) {
     double X = 10;
 	double dx = 0.2;
-	// printf("1.0 is %.20lf\n", 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1);
+	printf("1.0 is %.20lf\n", 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1);
 	for (double x = X; x != 0; x -= dx) {
 	    printf("%lf\n", x);
 		if (fabs(x - 2.0) < dx / 2.0) {
