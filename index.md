@@ -1,6 +1,7 @@
 # Оглавление
 
 ## Полезные статьи
+- [Как выложить статью?](/usefull-notes/tutor/index.md)
 - [Стресс-тестирование](/usefull-notes/stress-tests/index.md)
 
 ## Алгоритмы
