@@ -93,5 +93,5 @@ ExchangeDown(Array, lenArray, 1);
 
 Мы большие молодцы)))
 
-[![IMAGE ALT TEXT HERE](images/mem.jpg)](https://www.youtube.com/watch?v=hQYhdHjP-gM)
+[![IMAGE ALT TEXT HERE](images/Пусто.jpg)](https://www.youtube.com/watch?v=hQYhdHjP-gM)
 
