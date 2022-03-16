@@ -1,5 +1,6 @@
-<h1>Как создать и выложить статью?</h1>
-Заходим в главный репозиторий.(https://github.com/lupusomniator/21212-theory)
+# Как создать и выложить статью?
+Заходим в [главный репозиторий.](https://github.com/lupusomniator/21212-theory)
+
 Делаем Fork(Это копирование репозитория себе)
 <p align="center">
 <img src="images/tut1.png ">
@@ -13,6 +14,7 @@
 <img src="images/tut3.png ">
 </p>
 Теперь к самому интересному:
+
 Заходим в нужную нам тему(Алгоритмы, Язык Си, Структуры Данных)
 <p align="center">
 <img src="images/tut4.png ">
@@ -39,13 +41,16 @@
 <img src="images/tut10.png ">
 </p>
 Для полноценной статьи вам необходимо ещё создать файл "_config.yml", в который записать:
-'''title:       "Язык C"
+
+``` 
+title:       "Язык C"
 description: "Вещественные типы"
 copyright:   "© Группа 21212"
 
 header_pages:
   - index.md
-'''
+```
+
 Файл должен выглядеть так:
 <p align="center">
 <img src="images/tut11.png ">
