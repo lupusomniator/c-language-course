@@ -33,22 +33,25 @@ ____
   char string[] = "hello";
 ```
 
-![](https://github.com/nipoks/21212-theory/blob/main/c-language/string/images/1.png)
-
 В таком варианте введения строки компилятор сам определит, сколько необходимо выделить памяти.
 
-![](https://github.com/nipoks/21212-theory/blob/main/c-language/string/images/2.png)
+```c++
+  char string[] = {'h', 'e', 'l', 'l', 'o', '\0'};
+```
 
 Как и в прошлом случае переживать о нужном количестве памяти не следует, однако важно помнить при таком вводе строки о необходимости поставить в конец завершающий символ “\0”. Именно он и будет отличать просто массив от строки.
 
-![](https://github.com/nipoks/21212-theory/blob/main/c-language/string/images/3.png)
+```c++
+  char string[10];
+```
 
 Мы подготовили переменную string для записи в неё последовательности символов, ВАЖНО вписать мы можем только 9 (n-1) знаков т.к. последний по умолчанию отводится для “\0”.
 
 Можно создавать указатели на строку: 
 
-![](https://github.com/nipoks/21212-theory/blob/main/c-language/string/images/4.png)
-
+```c++
+  char* stringLink = string;
+```
 
 
 scanf( “%s”, string);
