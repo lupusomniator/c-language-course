@@ -30,7 +30,7 @@ ____
 
 Стоит отметить, строки могут быть типа char или int (в зависимости от того, что мы собираемся в них хранить).
 
-#![](https://github.com/nipoks/21212-theory/blob/main/c-language/string/images/1.png)
+![](https://github.com/nipoks/21212-theory/blob/main/c-language/string/images/1.png)
 
 В таком варианте введения строки компилятор сам определит, сколько необходимо выделить памяти.
 
