@@ -58,7 +58,7 @@ ____
 ```c++
 #include <stdio.h>
 
-void main() {
+int main() {
 	char string[100];
 	scanf("%99s", string);
 return 0;
@@ -77,7 +77,7 @@ while (string[len] != '\0') {
 
 Вывод осуществляется благодаря функции 
 ```c++
-printf( “%s”, string);
+printf(“%s”, string);
 ```
 ____
 ## 3. Основные функции стандартной библиотеки string.h
