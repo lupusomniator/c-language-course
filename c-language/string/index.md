@@ -98,7 +98,7 @@ ____
 
 
 
-
+![](https://github.com/nipoks/21212-theory/blob/main/c-language/string/images/mem.png)
 
 
 
