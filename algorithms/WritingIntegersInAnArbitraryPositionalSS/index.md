@@ -23,12 +23,13 @@ __Выделяют два перевода:__
  ![image](https://user-images.githubusercontent.com/101891316/159057388-be16af10-b7d8-4536-ae83-b722a8b5a377.png)
 
 Реализация на СИ выглядит примерно так:
-
+```с++
     for (int i = 0; num > 0; i++) {
          newNum[i] = IntToChar(num % baseSS);
          num /= baseSS;  
      }
      Reverse(newNum);
+```     
     
 2) _В десятичную СС_
 
@@ -37,10 +38,12 @@ __Выделяют два перевода:__
 ![image](https://user-images.githubusercontent.com/101891316/159065490-e390c2bf-e1db-4de0-8013-c7d5b31fa9d9.png)
 
 Запрогать это можно следующим образом:
-
+```с++
     for (int i = 0; i < size; i++) {
         newNum = newNum*baseSS + CharToInt(num[i]);
         }
+```        
+        
         
 На этом всё :) Надеюсь, статья была полезной, а иначе - хотя бы понятной для вас! ☀️
 
