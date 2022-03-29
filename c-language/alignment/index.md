@@ -53,19 +53,18 @@ Ahaha, sorry, Bro
 #include  <stdio.h>
 #include  <stdlib.h>
 
-struct  TList1 {
+typedef struct  TList1 {
     int Value;
-    struct  TList*  Next;
+    struct  TList1*  Next;
     int Freq;
-};
+} TList1;
 
-struct  TList2 {
-    struct  TList*  Next;
+typedef struct  TList2 {
+    struct  TList2*  Next;
     int Freq;
     int Value;
-};
+} TList2;
 
-typedef  struct  TList  TList;
 
 int  main(void) {
     TList1 list1 = {0, 0, 0};
@@ -96,19 +95,18 @@ Space нужен как раз для выравнивания адреса Next
 #include  <stdio.h>
 #include  <stdlib.h>
 
-struct  TList1 {
-    int Value;
-    struct  TList*  Next;
-    int Freq;
-};
 
-struct  TList2 {
-    struct  TList*  Next;
+typedef struct  TList1 {
     int Value;
+    struct  TList1*  Next;
     int Freq;
-};
+} TList1;
 
-typedef  struct  TList  TList;
+typedef struct  TList2 {
+    struct  TList2*  Next;
+    int Freq;
+    int Value;
+} TList2;
 
 int  main(void) {
     TList1 list1 = {0, 0, 0};
@@ -146,8 +144,8 @@ typedef  struct  TList  TList;
 int  main(void) {
     TList list = {0, 0, 0};
     if (sizeof(list) ==  sizeof(list.Value) +  sizeof(list.Next) + sizeof(list.Freq)) {
-    printf("You are right!\n");
-    printf("%d", sizeof(list));
+        printf("You are right!\n");
+        printf("%d", sizeof(list));
     } else {
         printf("Ahaha, sorry, Bro\n");
     }
