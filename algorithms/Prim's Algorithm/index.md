@@ -1,5 +1,5 @@
 <p align="center">
-<img src="images/Мем.png" alt="Мем" title="Мем">
+<img src="image/Мес.png" alt="Мем" title="Мем">
 </p>
 
 # Общая инфа
@@ -7,7 +7,7 @@
 **Алгоритм Прима** — алгоритм построения [минимального остовного дерева](https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%BE%D1%81%D1%82%D0%BE%D0%B2%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE "Минимальное остовное дерево") взвешенного связного неориентированного графа. Алгоритм впервые был открыт в 1930 году чешским математиком [Войцехом Ярником](https://ru.wikipedia.org/wiki/%D0%AF%D1%80%D0%BD%D0%B8%D0%BA,_%D0%92%D0%BE%D0%B9%D1%82%D0%B5%D1%85 "Ярник, Войтех"), позже переоткрыт [Робертом Примом](https://ru.wikipedia.org/w/index.php?title=%D0%9F%D1%80%D0%B8%D0%BC,_%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82&action=edit&redlink=1 "Прим, Роберт (страница отсутствует)") в 1957 году, и, независимо от них, [Э. Дейкстрой](https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%B9%D0%BA%D1%81%D1%82%D1%80%D0%B0,_%D0%AD%D0%B4%D1%81%D0%B3%D0%B5%D1%80_%D0%92%D0%B8%D0%B1%D0%B5 "Дейкстра, Эдсгер Вибе") в 1959 году.
 
 <p align="center">
-<img src="images/Вики.png" alt="Вики" title="Вики">
+<img src="image/Вики.png" alt="Вики" title="Вики">
 </p>
 
 
