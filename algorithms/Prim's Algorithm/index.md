@@ -45,7 +45,7 @@
 <img src="image/6_1.png" alt="6" title="6">
 </p>
 <p align="left">
-<img src="image/7_1.png" alt="7" title="7">
+<img src="image/7.png" alt="7" title="7">
 <align="right">
 <img src="image/Остовное дерево_1.png" alt="Остовное дерево" title="Остовное дерево">
 </p>
