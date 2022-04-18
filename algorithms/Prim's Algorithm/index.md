@@ -1,4 +1,6 @@
-![](Aspose.Words.7ea946a3-c685-470c-86e8-cfc13751017e.001.png)
+<p align="center">
+<img src="images/Мем.png" alt="Мем" title="Мем">
+</p>
 
 # Общая инфа
 
