@@ -53,6 +53,7 @@ void Append(TList* list, TCustomContent content) {
 	TListNode* newNode = InitListNode(content);
 	if (!list->Head) {
 		list->Head = newNode;
+		return;
 	}
 	TListNode* currNode = list->Head;
 	while (currNode && currNode->Next) {
