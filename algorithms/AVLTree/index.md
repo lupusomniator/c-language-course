@@ -85,20 +85,22 @@ ____
 
 Реализуются на основе двух маленьких поворотов. Какой именно надо делать зависит от того, какие в данный момент высоты у поддеревьев ниже. Описывать словами все варианты не думаю хорошей идеей, ниже рассмотрены все случаи:
 ```c++
-if (CheckNULL(BlockNow->right) - CheckNULL(BlockNow->left) > 1 ) {
-    if (CheckCheckNULL(BlockNow->right, 1)  <= CheckCheckNULL(BlockNow->right, 0)) {
+if (Height(BlockNow->right) - Height(BlockNow->left) > 1 ) {
+    if (Height(BlockNow->right->left)  <= Height(BlockNow->right->right)) {
         BlockNow = LeftSmallTurn(BlockNow);
     } else {
         BlockNow = LeftBigTurn(BlockNow);
     }
 } else {
-    if (CheckCheckNULL(BlockNow->left, 0) <= CheckCheckNULL(BlockNow->left, 1)) {
+    if (Height(BlockNow->left->right) <= Height(BlockNow->left->left)) {
         BlockNow = RightSmallTurn(BlockNow);
     } else {
         BlockNow = RightBigTurn(BlockNow);
     }
 }
 ```
+Где функция Hight возращает высоту поддерева.
+
 На примере большого левого:
 
 <p align="center">
@@ -119,5 +121,5 @@ ____
 
 По традиции, мем: 
 <p align="center">
-<img src="image/мем.jpg" widdth="120" height="260">
+<img src="image/мем.jpg" widdth="140" height="280">
 </p>
