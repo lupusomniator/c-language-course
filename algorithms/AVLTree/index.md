@@ -91,18 +91,26 @@ ____
 
   Реализуются на основе двух маленьких поворотов. Какой именно надо делать зависит от того, какие в данный момент высоты у поддеревьев ниже. Описывать словами все варианты не думаю хорошей идеей, ниже рассмотрены все случаи:
 ```c++
-if (Height(BlockNow->right) - Height(BlockNow->left) > 1 ) {
-    if (Height(BlockNow->right->left)  <= Height(BlockNow->right->right)) {
-        BlockNow = LeftSmallTurn(BlockNow);
+AVLTree* MakeATurn(AVLTree* BlockNow) {
+    if (abs(Height(BlockNow->right) - Height(BlockNow->left)) <= 1) {
+        return BlockNow;
     } else {
-        BlockNow = LeftBigTurn(BlockNow);
+    
+        if (Height(BlockNow->right) - Height(BlockNow->left) > 1 ) {
+            if (Height(BlockNow->right->left)  <= Height(BlockNow->right->right)) {
+                BlockNow = LeftSmallTurn(BlockNow);
+            } else {
+                BlockNow = LeftBigTurn(BlockNow);
+            }
+        } else {
+            if (Height(BlockNow->left->right) <= Height(BlockNow->left->left)) {
+                BlockNow = RightSmallTurn(BlockNow);
+            } else {
+                BlockNow = RightBigTurn(BlockNow);
+            }
+        }
     }
-} else {
-    if (Height(BlockNow->left->right) <= Height(BlockNow->left->left)) {
-        BlockNow = RightSmallTurn(BlockNow);
-    } else {
-        BlockNow = RightBigTurn(BlockNow);
-    }
+    return BlockNow;
 }
 ```
   Где функция Height возращает высоту поддерева. Внутри этой функции надо сделать проверку на то, что вершина, которую мы передаем в функцию, существует (иначе мы не сможем взять из нее высоту). В противном случае возращаем 0.
