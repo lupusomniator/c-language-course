@@ -45,10 +45,10 @@ struct AVLTree {
 А вот тут и начинаются различия от обычного дерева: добавив новый элемент может случиться так, что высота слева и справа будет отличаться больше чем на 1. Нужно делать балансировку для каждого поддерева, выходя вверх из рекурсии. Важно также не забываем обновлять высоту 
 ```c++
 AVLTree* AppentToTree(AVLTree* BlockNow, int val) {
-        ………………………… //поиск места куда добавить + рекурсия 
-  BlockNow = MakeATurn(BlockNow);
-  BlockNow->height = MaxHeight(BlockNow) + 1;
-  return BlockNow;
+              . . .    //поиск места куда добавить + рекурсия 
+    BlockNow = MakeATurn(BlockNow);
+    BlockNow->height = MaxHeight(BlockNow) + 1;
+    return BlockNow;
 }
 ```
 
@@ -60,14 +60,13 @@ AVLTree* AppentToTree(AVLTree* BlockNow, int val) {
 
 Псевдокод:
 ```c++
-AVLTree* rotateright(AVLTree* p) { // правый поворот вокруг p
-  AVLTree* q = p->left;
-  p->left = q->right;
-  q->right = p;
+AVLTree* RightSmallTurn(AVLTree* p) { // правый поворот вокруг p
+      AVLTree* q = p->left;
+      p->left = q->right;
+      q->right = p;
   
-  //так же надо изменить высоту у узла p и q
-  
-  return q;
+      //так же надо изменить высоту у узла p и q
+      return q;
 }
 ```
 Левый поворот реализуется аналогично.
@@ -77,17 +76,17 @@ AVLTree* rotateright(AVLTree* p) { // правый поворот вокруг p
 Реализуются на основе двух маленьких поворотов. Какой именно надо делать зависит от того, какие в данный момент высоты у поддеревьев ниже. Описывать словами все варианты не думаю хорошей идеей, ниже рассмотрены все случаи:
 ```c++
 if (CheckNULL(BlockNow->right) - CheckNULL(BlockNow->left) > 1 ) {
-  if (CheckCheckNULL(BlockNow->right, 1)  <= CheckCheckNULL(BlockNow->right, 0)) {
-    BlockNow = LeftSmallTurn(BlockNow);
-  } else {
-    BlockNow = LeftBigTurn(BlockNow);
-  }
+    if (CheckCheckNULL(BlockNow->right, 1)  <= CheckCheckNULL(BlockNow->right, 0)) {
+        BlockNow = LeftSmallTurn(BlockNow);
+    } else {
+        BlockNow = LeftBigTurn(BlockNow);
+    }
 } else {
-  if (CheckCheckNULL(BlockNow->left, 0) <= CheckCheckNULL(BlockNow->left, 1)) {
-    BlockNow = RightSmallTurn(BlockNow);
-  } else {
-    BlockNow = RightBigTurn(BlockNow);
-  }
+    if (CheckCheckNULL(BlockNow->left, 0) <= CheckCheckNULL(BlockNow->left, 1)) {
+        BlockNow = RightSmallTurn(BlockNow);
+    } else {
+        BlockNow = RightBigTurn(BlockNow);
+    }
 }
 ```
 На примере большого левого:
@@ -96,9 +95,9 @@ if (CheckNULL(BlockNow->right) - CheckNULL(BlockNow->left) > 1 ) {
 А вот и весь код поворота:
 ```c++
 AVLTree* LeftBigTurn(AVLTree* Block) {
-  Block->right = RightSmallTurn(Block->right);
-  Block = LeftSmallTurn(Block);
-  return Block;
+    Block->right = RightSmallTurn(Block->right);
+    Block = LeftSmallTurn(Block);
+    return Block;
 }
 ```
 
