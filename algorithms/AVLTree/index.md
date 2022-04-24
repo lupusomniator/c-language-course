@@ -56,7 +56,9 @@ AVLTree* AppentToTree(AVLTree* BlockNow, int val) {
 
 Рассмотрим ситуацию для правого малого поворота: 
 
-
+<p align="center">
+<img src="image/3.jpg" widdth="140" height="280">
+</p>
 
 Псевдокод:
 ```c++
@@ -91,6 +93,9 @@ if (CheckNULL(BlockNow->right) - CheckNULL(BlockNow->left) > 1 ) {
 ```
 На примере большого левого:
 
+<p align="center">
+<img src="image/4.jpg" widdth="140" height="280">
+</p>
 
 А вот и весь код поворота:
 ```c++
@@ -103,4 +108,6 @@ AVLTree* LeftBigTurn(AVLTree* Block) {
 
 
 По традиции, мем: 
-
+<p align="center">
+<img src="image/мем.jpg" widdth="120" height="260">
+</p>
