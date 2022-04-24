@@ -28,7 +28,7 @@ struct AVLTree {
   int val;
   int height;
   AVLTree* left;
-  AVLTree*  right;
+  AVLTree* right;
 };
 ```
 
