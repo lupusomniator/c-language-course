@@ -93,7 +93,7 @@ ____
 ```c++
 AVLTree* MakeATurn(AVLTree* BlockNow) {
     if (abs(Height(BlockNow->right) - Height(BlockNow->left)) <= 1) {
-        return BlockNow;
+        return BlockNow;  // все ок, крутить не надо
     } else {
         if (Height(BlockNow->right) - Height(BlockNow->left) > 1 ) {
             if (Height(BlockNow->right->left)  <= Height(BlockNow->right->right)) {
