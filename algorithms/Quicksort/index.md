@@ -79,5 +79,3 @@ int QuickSort(int *array, int left, int right)
 	if (base+1<right) QuickSort(array,base+1,right);
 };
 ```
-### Я тут стримером стал, залетайте на огонек :З
-[Уютное местечко](https://vk.com/darlitch)
