@@ -27,5 +27,5 @@ ____
 <p align="left">
 <img src="image/2.jpg" widdth="100" height="200">
 </p>
-
+____
 ## 2. Обход в глубину
