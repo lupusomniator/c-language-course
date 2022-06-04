@@ -28,8 +28,7 @@ ____
 <p align="left">
 <img src="image/2.jpg" widdth="100" height="200">
 </p>
-____
-
+_____
 
 ## 2. Обход графа в глубину
 
