@@ -48,7 +48,7 @@ ____
 <p align="left">
 <img src="image/4.2.jpg" widdth="100" height="200">
 </p>
-вафыаваываыв
+Из "3" есть 3 пути, продолжаем:
 <p align="left">
 <img src="image/4.3.jpg" widdth="100" height="200">
 </p>
