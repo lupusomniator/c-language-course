@@ -60,3 +60,5 @@ ____
 <p align="left">
 <img src="image/4.5.jpg" widdth="100" height="200">
 </p>
+
+Реализация алгоритма основана на [рекурсии](https://youtu.be/ykl42cJVB9I?t=60)
