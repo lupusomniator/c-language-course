@@ -62,3 +62,20 @@ ____
 </p>
 
 Реализация алгоритма основана на [рекурсии](https://youtu.be/ykl42cJVB9I?t=60)
+```c++
+int DFS(graf (сам граф), vertexNow (вершина на данный момент), finish (искомая вершина), int* result) {
+    if (vertexNow == finish) {
+        return 0;
+    }
+    if (vertexNow.visit == 1) {
+        return 1;
+    }
+    ///  в этой части кода проверка соседей, в зависимости от реализации самого графа проходимся по всем соседним вершинам
+        *result = DFS(graf, "vertex куда спустились", finish, result);
+        if (*result == 0) {
+            return 0;
+        }
+    /// и в случае, если добраться не удалось
+    return 0;
+}
+```
