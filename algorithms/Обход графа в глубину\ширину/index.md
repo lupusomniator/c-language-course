@@ -115,3 +115,26 @@ int DFS(graf (сам граф), vertexNow (вершина на данный мо
 
 В очереди осталась одна вершина - "4". Ура мы справились!
 
+```c++
+int BFS(graf (сам граф), start (начальная вершина), finish (искомая вершина)) {
+    TQueue* queue = Create();
+    queue.push(start); ///добавили первую вершину
+    start.use = 1;  /// пометили что посетили её
+    while(queue->Size > 0) {   /// пока у нас в очереди что-то есть:
+        int vertexNow = queue.pop();    ///вытаскиваем 
+        if (vertexNow == finish) {
+            return 0;
+        }
+        for (......) { ///проходимся по всем соседям (neighbor - сосед) вытащенной ранее vertexNow
+            if (neighbor.use == 0) {
+                if (neighbor == finish) {
+                    return 0;
+                }
+            neighbor.use = 1;
+            queue.push(neighbor);
+            }
+        }
+    }
+    return 1;
+}
+```
