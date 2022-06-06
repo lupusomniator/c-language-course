@@ -112,7 +112,7 @@ int DFS(graf (сам граф), vertexNow (вершина на данный мо
 Двигаемся дальше - вытаскиваем "6"... не ответ ... нет соседей ... короче мимо
 
 <p align="left">
-<img src="image/5.3.jpg" widdth="100" height="200">
+<img src="image/5.4.jpg" widdth="100" height="200">
 </p>
 
 `| 4 | _ | _ | _ | _ |`
