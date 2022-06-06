@@ -87,11 +87,11 @@ int DFS(graf (сам граф), vertexNow (вершина на данный мо
 <p align="left">
 <img src="image/4.jpg" widdth="100" height="200">
 </p>
-ауеоаы
+
 <p align="left">
 <img src="image/5.1.jpg" widdth="100" height="200">
 </p>
-авоваъуъ
+
 <p align="left">
 <img src="image/5.2.jpg" widdth="100" height="200">
 </p>
