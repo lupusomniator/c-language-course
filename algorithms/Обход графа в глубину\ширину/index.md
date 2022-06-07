@@ -65,21 +65,20 @@ ________________________________________________________________________________
 ```c++
 int DFS(graf (сам граф), vertexNow (вершина на данный момент), finish (искомая вершина), int* result) {
     if (vertexNow == finish) {
-        return 0;
+        return EXIT_SUCCESS;
     }
     if (vertexNow.visit == 1) {
-        return 1;
+        return EXIT_FAILURE;
     }
     ///  в этой части кода проверка соседей, в зависимости от реализации самого графа проходимся по всем соседним вершинам
         *result = DFS(graf, "vertex куда спустились", finish, result);
         if (*result == 0) {
-            return 0;
+            return EXIT_SUCCESS;
         }
     /// и в случае, если добраться не удалось
-    return 1;
+    return EXIT_FAILURE;
 }
 ```
-Где return 0 означает, что мы нашли искомую вершину, 1 если не получилось.
 ____
 
 ## 3. Обход графа в ширину
@@ -120,7 +119,7 @@ ____
 
 В очереди осталась одна вершина - "4". Ура мы справились!
 
-Псевдокод, return 0 если удалось найти искомую вершину, return 1 если нет:
+Псевдокод:
 ```c++
 int BFS(graf (сам граф), start (начальная вершина), finish (искомая вершина)) {
     TQueue* queue = Create();
@@ -129,19 +128,19 @@ int BFS(graf (сам граф), start (начальная вершина), finis
     while(queue->Size > 0) {   /// пока у нас в очереди что-то есть:
         int vertexNow = queue.pop();    ///вытаскиваем 
         if (vertexNow == finish) {
-            return 0;
+            return EXIT_SUCCESS;
         }
         for (......) { ///проходимся по всем соседям (neighbor - сосед) вытащенной ранее vertexNow
             if (neighbor.use == 0) {
                 if (neighbor == finish) {
-                    return 0;
+                    return EXIT_SUCCESS;
                 }
-            neighbor.use = 1;
-            queue.push(neighbor);
+                neighbor.use = 1;
+                queue.push(neighbor);
             }
         }
     }
-    return 1;
+    return EXIT_FAILURE;
 }
 ```
 ____
