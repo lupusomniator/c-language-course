@@ -1,0 +1,6 @@
+title:       "Язык C"
+description: "Препроцессор. Включаемые файлы. Условная компиляция."
+copyright:   "© Группа 21212"
+
+header_pages:
+  - index.md
