@@ -94,7 +94,7 @@
 
 ### Реализация алгоритма
 
-```C
+```c++
 #include <stdio.h>
 #include <stdlib.h>
 #define SIZE 6
