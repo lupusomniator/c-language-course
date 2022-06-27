@@ -75,20 +75,20 @@ int AlgorithmPrima (что-то там) {
 **Важное замечание!!!** Не нужно брать ребро, содержащее две помеченные вершины, оно не продвинет нас вперёд, лишь увеличит стоимость нашего дерева
 
 <p align="left">
-<img src="image/3_1.png" alt="3" title="3">
-<align="right">
-<img src="image/4_1.png" alt="4" title="4">
+<img style="float: left;" src="image/3_1.png" alt="3" title="3">
+<img style="float: right;" src="image/4_1.png" alt="4" title="4">
 </p>
+
 <p align="left">
-<img src="image/5_1.png" alt="5" title="5">
-<align="right">
-<img src="image/6_1.png" alt="6" title="6">
+<img style="float: left;" src="image/5_1.png" alt="5" title="5">
+<img style="float: right;" src="image/6_1.png" alt="6" title="6">
 </p>
+
 <p align="left">
-<img src="image/7_1.png" alt="7" title="7">
-<align="right">
-<img src="image/Остовное дерево_1.png" alt="Остовное дерево" title="Остовное дерево">
+<img style="float: left;" src="image/7_1.png" alt="7" title="7">
+<img style="float: right;" src="image/Остовное дерево_1.png" alt="Остовное дерево" title="Остовное дерево">
 </p>
+
 
 Всё, все вершины были пройдены, использовано **N – 1** ребро, работа алгоритма подошла к концу. Мы получили необходимое нам остовное дерево. Оказалось не так уж и сложно)                                                          
 Удачной всем проги, всем peace [✌](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
