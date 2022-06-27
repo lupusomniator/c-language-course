@@ -1,8 +1,0 @@
-theme: jekyll-theme-hacker
-
-title:       "Программирование"
-description: "Теория по курсу \"Программирование\" ФИТ НГУ"
-copyright:   "© Группа 21212"
-
-header_pages:
-  - index.md
