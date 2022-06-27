@@ -47,12 +47,6 @@ Array[index] >= Array[index*2] and Array[index] >= Array[index*2+1]
       if (iArray[max] > iArray[index]) {
         swap(iArray[index], iArray[max]);
         ExchangeDown(iArray, lenArray, max);
-        if (max == index * 2) {
-          ExchangeDown(iArray, lenArray, index * 2 + 1);
-        }
-        else {
-          ExchangeDown(iArray, lenArray, index * 2);
-        }
       }
     }
   }
