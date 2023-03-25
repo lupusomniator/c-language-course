@@ -29,7 +29,7 @@ ____
 
 В качестве примера рассмотрим вот такое дерево: 
 
-![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/Дерево.png)
+![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/images/Дерево.png)
 
 На выходе мы должны получить последовательность вида:  *20 9 7 11 25 22 31*
 
@@ -142,7 +142,7 @@ void printPreorder(struct TNode* node) {
  Инфиксный обход можно использовать для решения многих задач, таких как поиск k-го элемента в дереве или печать всех элементов дерева в отсортированном порядке.
  Рассмотрим все то же дерево: 
  
- ![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/Дерево.png)
+ ![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/images/Дерево.png)
 
  
 Мы получаем такую последовательность: *7 9 11 20 22 25 31*
@@ -164,7 +164,7 @@ void printInOrder(struct TNode* node) {
 Такой обход производится снизу вверх. Корень дерева посещается после его поддеревьев. 
 Сначала посещается левое поддерево, затем правое поддерево, а после корневой узел. Может использоваться для удаления дерева.
 
-![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/Дерево.png)
+![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/images/Дерево.png)
 
 После такого обхода мы получим: *7 11 9 22 31 25 20*
 
@@ -184,32 +184,32 @@ void printPostOrder(struct TNode* node) {
 Обход в ширину подразумевает, что сначала мы посещаем корень, затем, слева направо, все ветви первого уровня, затем все ветви второго уровня и т.д.
 Такой обход производится с помощью очереди.
 
-![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/Дерево1.png)
+![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/images/Дерево1.png)
 
 Получаем: *20 9 25 7 11 22 31*
 
 *Рассмотрим, как работает очередь:*
 
 Сначала посетим корень. Сейчас он находится в очереди
-![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/Queue1.jpg)
+![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/images/Queue1.jpg)
 
 Печатаем 20, и, так как этот корень имеет детей, поместим их в очередь (9 и 25 соответственно). Важно, что мы сначала рассматриваем первый уровень, и не спускаемся ниже!
 Когда узел находится в начале очереди, мы должны проверить, есть ли у него правый и левый потомки. Если такие имеются, то добавляем их в очередь.
-![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/Queue3.jpg)
+![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/images/Queue3.jpg)
 
 У 9 есть потомки 7 и 11, и мы поместили их в очередь:
 
-![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/Queue4.jpg)
+![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/images/Queue4.jpg)
 
 У 25 есть потомки 22 и 31, добавим их :)
 
-![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/Queue5.jpg)
+![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/images/Queue5.jpg)
 
 7, 11, 22 и 31 являются листьями нашего дерева (у них нет потомков), поэтому мы просто последовательно выводим их:
 
-![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/Queue6.jpg)
+![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/images/Queue6.jpg)
 
-![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/Queue7.jpg)
+![Tree](https://github.com/lyttiii/c-language-course/blob/main/algorithms/TreeTraversals/images/Queue7.jpg)
 
 
 
