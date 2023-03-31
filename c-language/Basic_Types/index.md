@@ -187,8 +187,6 @@ int main()
 
 Мы можем использовать оператор sizeof() для проверки размера переменной:
 ```c
-// C Program to print size of
-// different data type in C
 #include <stdio.h>
 
 int main()
