@@ -5,12 +5,13 @@
 - [Стресс-тестирование](/usefull-notes/stress-tests/index.md)
 - [Выравнивание памяти](/usefull-notes/alignment/index.md)
 - [Переполнение буфера](/usefull-notes/overflow/index.md)
+- [Санитайзеры](/usefull-notes/sanitizer/index.md)
 
 ## Алгоритмы
 - [Алгоритм Беллмана-Форда построения кратчайшего пути в графе](/algorithms/BellmanFord/index.md)
 - [Алгоритм Бойера-Мура поиска подстроки в строке без суффиксной эвристики.](/algorithms/BoyerMoore/index.md)
 - Алгоритм Рабина-Карпа поиска подстроки в строке.
-- Алгоритм топологической сортировки.
+- [Алгоритм топологической сортировки.](/algorithms/topsort/index.md)
 - [Алгоритм записи целых чисел в произвольной позиционной с.с.](/algorithms/zapisSpsVika/index.md)
 - [Алгоритмы обхода графа в глубину и в ширину. Оценки сложности.](/algorithms/obhodGrafaDFSandBFS/index.md)
 - Алгоритмы обхода деревьев (в ширину, в глубину: в пре/пост/инфиксном порядке).
