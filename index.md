@@ -5,6 +5,7 @@
 - [Стресс-тестирование](/usefull-notes/stress-tests/index.md)
 - [Выравнивание памяти](/usefull-notes/alignment/index.md)
 - [Переполнение буфера](/usefull-notes/overflow/index.md)
+- [Санитайзеры](/usefull-notes/sanitizer/index.md)
 
 ## Алгоритмы
 - [Алгоритм Беллмана-Форда построения кратчайшего пути в графе](/algorithms/BellmanFord/index.md)
