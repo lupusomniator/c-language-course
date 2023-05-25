@@ -69,4 +69,15 @@ list<Node> encodeLZ77(string s):
 * Иначе, возвращаемся назад на (offset) и выводим (lenght) символов.
 * Если (offset) > (lenght) делаем возврат div(offset, lenght) + 1 раз (целочисленное деление) и выводим (offset) символов.
 
+```
+string decodeLZ77(list<Node> encoded):
+    ans = ""
+    for node in encoded:
+        if node.length > 0:                         // если необходим повтор
+            start = ans.length - node.offset        // возвращаемся на  символов назад
+            for i = 0 .. node.length - 1:           // добавляем  символов
+                ans += ans[start + i]
+        ans += node.next                            // добавляем следующий символ
+    return ans
+```
  
